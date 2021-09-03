@@ -14,5 +14,5 @@ function solution(hours, minutes) {
         hours = hours - 1;
         if(hours === -1) hours = 23;
     }
-    console.log(hours +' '+ minutes);
+    console.log(`${hours} ${minutes}`);
 }
