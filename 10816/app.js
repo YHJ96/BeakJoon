@@ -6,19 +6,13 @@ const inputChoice = input[3].split(' ').map((item) => +item);
 
 console.log(solution(inputArray, inputChoice));
 
-// 시간 초과
+// 시간 실패
 function solution(arr, choice) {
     let result = Array(choice.length).fill(0);
-    for(let i = 0; i < choice.length; i++) {
-        for(let j = 0; j < arr.length; j++) {
-            if(choice[i] === arr[j]) {
-                result[i] += 1;
-            }
+    for(let x of arr) {
+        if(choice.includes(x)) {
+            result[choice.indexOf(x)] += 1;
         }
     }
-    let answer = '';
-    for(let x of result) {
-        answer += x + ' ';
-    }
-    return answer;
+    return result.join(' ');
 }
