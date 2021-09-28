@@ -11,6 +11,7 @@ function solution(n) {
     let r = 0;
     let max = 0;
     let min = 0;
+    // r이 0이 되면 break
     while(true) {
       r = n1 % n2;
       n1 = n2;
@@ -24,3 +25,5 @@ function solution(n) {
     let answer = max + '\n' + min;
     return answer;
 }
+
+// 1. 유클리드 호제법 X % Y = R -> Y % R = R1 ...
