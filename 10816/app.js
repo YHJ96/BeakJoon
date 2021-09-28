@@ -6,13 +6,24 @@ const inputChoice = input[3].split(' ').map((item) => +item);
 
 console.log(solution(inputArray, inputChoice));
 
-// 시간 실패
 function solution(arr, choice) {
-    let result = Array(choice.length).fill(0);
+    const result = [];
+    // 키와 값을 사용하기 위해 Map함수 지정 Set은 중복을 제거함으로 Map이용
+    const compare = new Map();
+    // x가 compare에 없으면 그 인자를 키로 하고 값을 1로 만들고 있으면 1 증가
     for(let x of arr) {
-        if(choice.includes(x)) {
-            result[choice.indexOf(x)] += 1;
-        }
+        if(compare.has(x)) compare.set(x, compare.get(x) + 1);
+        else compare.set(x, 1);
     }
-    return result.join(' ');
+    // x가 값이 있으면 그 키의 값을 result에 넣기 없으면 0 넣기
+    for(let x of choice) {
+        if(compare.get(x)) result.push(compare.get(x));
+        else result.push(0);
+    }
+    // 정답 정제
+    let answer = '';
+    for(let x of result) {
+        answer += x + ' ';
+    }
+    return answer;
 }
