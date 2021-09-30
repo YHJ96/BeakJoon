@@ -8,6 +8,7 @@ for(let i = 1; i <= input[0]; i++) {
 }
 console.log(solution(inputArray));
 
+// 원의 접점 방정식 문제
 function solution(arr) {
     for(let x of arr) {
         const jo = [x[0],x[1]];
