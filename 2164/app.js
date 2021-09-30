@@ -2,6 +2,7 @@ const fs = require('fs');
 const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
 let input = fs.readFileSync(filePath).toString().trim().split('\n');
 
+// 생성자 함수로 Queue 구현
 function Queue() {
     this.store = {};
     this.head = 0;
@@ -41,10 +42,13 @@ console.log(solution(+input[0]));
 
 function solution(n) {
     let answer = new Queue();
+    // 1부터 n까지의 값을 Queue에 저장
     for(let i = 1; i <= n; i++) {
         answer.inqueue(i);
     }
+    // 1개의 수가 남을때 까지 반복
     while(answer.size() !== 1) {
+        // 제일 위부터 빼고 그 위를 또 뺴서 뒤로 push한다.
         answer.dequeue();
         let card = answer.dequeue();
         answer.inqueue(card);        
