@@ -12,9 +12,11 @@ for(let i = 1; i < input.length; i++) {
 console.log(solution(list, compare));
 
 function solution(list, compare) {
+    // set에 list을 넣는다
     const mySet = new Set(list);
     let answer = 0;
     for(let x of compare) {
+        // 비교할 인자가 set안에 있을경우 answer + 1 
         if(mySet.has(x)) answer += 1;
     }
     return answer;
