@@ -12,6 +12,7 @@ function solution(arr) {
     const minArr = [];
     const yAxis = arr.length;
     const xAxis = arr[0].length;
+    // 8 * 8 체스판은 고정이므로 미리 생성
     const white = [
         'WBWBWBWB',
         'BWBWBWBW',
@@ -36,25 +37,28 @@ function solution(arr) {
 
     function whiteCheck(y, x) {
         let counter = 0;
-
-        for (let i = y; i < y + 8; i++)
-            for (let j = x; j < x + 8; j++)
+        // 흰색 체스판 체크  white를 x,y만큼 자르면서 탐색
+        for (let i = y; i < y + 8; i++) {
+            for (let j = x; j < x + 8; j++) {
                 if (arr[i][j] !== white[i - y][j - x]) counter++;
-
+            }
+        }
         return counter;
     }
 
     function blackCheck(y, x) {
         let counter = 0;
-
-        for (let i = y; i < y + 8; i++)
-            for (let j = x; j < x + 8; j++)
+        // 검은색 체스판 체크  white를 x,y만큼 자르면서 탐색
+        for (let i = y; i < y + 8; i++) {
+            for (let j = x; j < x + 8; j++) {
                 if (arr[i][j] !== black[i - y][j - x]) counter++;
-
+            }
+        }
         return counter;
     }
 
     for (let i = 0; i + 7 < yAxis; i++) {
+        // 8칸씩 짜르기 위해서 2중 포문
         for (let j = 0; j + 7 < xAxis; j++) {
             minArr.push(whiteCheck(i, j));
             minArr.push(blackCheck(i, j));
