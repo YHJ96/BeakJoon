@@ -7,10 +7,12 @@ for(let i = 1; i < input.length; i++) {
     inputArray.push(inputValue);
 }
 
+// 생성자 함수로 덱 생성
 function deck() {
     this.data = [];
 }
 
+// unshift보다 성능이 좋아서 사용함
 deck.prototype.push_front = function(value) {
     this.data.splice(0, 0, value);
 }
@@ -51,8 +53,10 @@ deck.prototype.back = function() {
 function solution(arr) {
     let answer = '';
     const result = [];
+    // 인스턴스 생성
     const myDeck = new deck();
     for(let x of arr) {
+        // 문자열을 공백으로 나눠줌
         const item = x.split(' ');
         if(item[0] === 'push_front') {
             myDeck.push_front(item[1]);
@@ -72,6 +76,7 @@ function solution(arr) {
             result.push(myDeck.back());
         }
     }
+    // 문제 출력조건
     for(let x of result) {
         answer += x + '\n';
     }
