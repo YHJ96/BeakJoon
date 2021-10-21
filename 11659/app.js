@@ -9,7 +9,7 @@ for(let i = 0; i < input.length; i++) {
 }
 console.log(solution(inputArray));
 
-// 시간초과
+// 시간초과 다시풀기 미해결
 function solution(arr) {
     let result = []
     const myMap = new Map();

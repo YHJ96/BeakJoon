@@ -10,7 +10,7 @@ for (let i = 1; i <= +input[0]; i++) {
 
 console.log(solution(str, strArr));
 
-// 실패
+// 미해결
 function solution(str, strArr) {
     const compare = [...str];
     let answer = 0;

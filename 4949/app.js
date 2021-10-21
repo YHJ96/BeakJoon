@@ -4,7 +4,7 @@ let input = fs.readFileSync(filePath).toString().trim().split('\n');
 input.pop();
 
 console.log(solution(input));
-// 실패 테스트 케이스 다시 수정 (괄호를 하나로 보고 풀어야할꺼 같음)
+// 실패 테스트 케이스 다시 수정 (괄호를 하나로 보고 풀어야할꺼 같음) 미해결
 function solution(arr) {
     let answer = [];
     for (let x of arr) {
