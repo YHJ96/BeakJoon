@@ -65,4 +65,4 @@ function solution(arr) {
     return Math.min(...minArr);
 }
 
-console.log(solution(inputArray));
+console.log(solution(inputArray)); 

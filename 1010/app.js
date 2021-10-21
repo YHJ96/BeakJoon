@@ -39,4 +39,4 @@ function combination(n, r) {
     return answer;
 }
 
-console.log(solution(inputArray));
+console.log(solution(inputArray)); 

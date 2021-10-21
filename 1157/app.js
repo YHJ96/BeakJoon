@@ -28,4 +28,4 @@ function solution(s) {
     return alphabet[index].toUpperCase();
 }
 
-console.log(solution(input));
+console.log(solution(input)); 

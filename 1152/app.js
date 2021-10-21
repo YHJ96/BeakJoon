@@ -10,4 +10,4 @@ function solution(word) {
     else return word.length;
 }
 
-console.log(solution(input));
+console.log(solution(input)); 

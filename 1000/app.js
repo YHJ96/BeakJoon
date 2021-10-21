@@ -11,4 +11,4 @@ function solution(a, b) {
     return answer;
 }
 
-console.log(solution(input[0], input[1]));
+console.log(solution(input[0], input[1])); 

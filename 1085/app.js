@@ -13,4 +13,4 @@ function solution(x, y, w, h) {
     return Math.min(...answer);
 }
 
-console.log(solution(input[0], input[1], input[2], input[3]));
+console.log(solution(input[0], input[1], input[2], input[3])); 

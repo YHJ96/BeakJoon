@@ -11,4 +11,4 @@ function solution(arr) {
     return answer;
 }
 
-console.log(solution(input));
+console.log(solution(input)); 
