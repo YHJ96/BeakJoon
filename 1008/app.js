@@ -5,9 +5,10 @@ input = input[0];
 input = input.split(' ');
 input = input.map((item) => Number(item));
 
-solution(input[0], input[1]);
-
 function solution(a, b) {
+    // 사칙연산
     const answer = a / b;
-    console.log(answer);
+    return answer;
 }
+
+console.log(solution(input[0], input[1]));

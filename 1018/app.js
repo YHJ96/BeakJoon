@@ -6,8 +6,6 @@ for (let i = 1; i < input.length; i++) {
     inputArray.push(input[i].trim());
 }
 
-console.log(solution(inputArray));
-
 function solution(arr) {
     const minArr = [];
     const yAxis = arr.length;
@@ -66,3 +64,5 @@ function solution(arr) {
     }
     return Math.min(...minArr);
 }
+
+console.log(solution(inputArray));

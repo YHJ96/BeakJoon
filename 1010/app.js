@@ -6,7 +6,6 @@ for(let i = 1; i < input.length; i++) {
     const inputValue = input[i].split(' ').map((item) => +item);
     inputArray.push(inputValue);
 }
-console.log(solution(inputArray));
 
 // nCr문제 조합문제
 function solution(arr) {
@@ -39,3 +38,5 @@ function combination(n, r) {
     let answer = total / (choice * math);
     return answer;
 }
+
+console.log(solution(inputArray));

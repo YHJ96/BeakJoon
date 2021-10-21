@@ -3,8 +3,6 @@ const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
 let input = fs.readFileSync(filePath).toString().trim().split('\n');
 input = input[1].split(' ').map((item) => +item);
 
-console.log(solution(input));
-
 function solution(arr) {
     let numArr = arr.sort((a, b) => a-b);
     // 약수의 개수가 전부 들어오기 때문에 일단 sort정렬로 오름차순 정렬을 한다.
@@ -13,7 +11,4 @@ function solution(arr) {
     return answer;
 }
 
-/*
-문제 해석
-1. 약수의 개수가 전부다 들어오며 또한 1과 양수 A의 값은 들어오지 않는다.
-*/
+console.log(solution(input));

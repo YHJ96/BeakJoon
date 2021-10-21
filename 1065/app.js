@@ -3,8 +3,6 @@ const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
 let input = fs.readFileSync(filePath).toString().trim().split('\n');
 input = +input[0];
 
-console.log(solution(input));
-
 function solution(input) {
     const arr = [];
     for(let i = 1; i <= input; i++) {
@@ -24,3 +22,5 @@ function solution(input) {
     let answer = arr.length;
     return answer;
 }
+
+console.log(solution(input));
