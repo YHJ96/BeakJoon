@@ -5,6 +5,7 @@ input = +input;
 
 console.log(solution(input));
 
+// CheckPoint
 function solution(n) {
     let count = 1;
     while(true) {
