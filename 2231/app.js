@@ -19,4 +19,4 @@ function solution(n) {
         if(i === n - 1) num = 0;
     }
     return num;
-}
+} 

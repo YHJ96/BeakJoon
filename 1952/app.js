@@ -20,4 +20,4 @@ function solution(arr, num) {
         answer += x + '\n';
     }
     return answer.trimEnd();
-}
+} 

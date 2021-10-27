@@ -15,4 +15,4 @@ function solution(n) {
         if (answer < n[i] * (n.length - i)) answer = n[i] * (n.length - i);
     }
     return answer;
-}
+} 

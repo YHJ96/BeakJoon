@@ -16,4 +16,4 @@ function solution(num) {
     // 모든수를 더해준 값과 10을 나눠준 나머지를 구함
     const answer = arr % 10;
     return answer;
-}
+} 

@@ -11,4 +11,4 @@ function solution(n) {
         answer += n - i + 1;
     }
     return answer;
-}
+} 

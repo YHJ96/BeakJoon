@@ -58,4 +58,4 @@ function solution(n, item) {
     }
     return answer.trim() + '\n' + target;
 }
-console.log(solution(input[0], input[1]));
+console.log(solution(input[0], input[1])); 

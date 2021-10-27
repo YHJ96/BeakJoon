@@ -29,4 +29,4 @@ function solution(note, choice) {
         answer += x + '\n';
     }
     return answer.trim();
-}
+} 

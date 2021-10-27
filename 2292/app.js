@@ -6,6 +6,7 @@ input = Number(input[0]);
 solution(input);
 
 function solution(n) {
+    // 벌집문제 6각형이므로 6 * n만큼 증가 answer를 증가시키면서 숫자찾기
     let max = 1;
     let answer = 1;
     while(max < n) {

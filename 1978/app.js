@@ -23,4 +23,4 @@ function solution(arr) {
     // 원래 수의 배열 길이에서 소수가 아닌 배열 길이를 빼줌
     let answer = arr.length - compare.length;
     return answer;
-}
+} 

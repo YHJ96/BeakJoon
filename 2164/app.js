@@ -54,4 +54,4 @@ function solution(n) {
         answer.inqueue(card);        
     }
     return answer.store[0];
-}
+} 

@@ -37,4 +37,4 @@ function solution(min, max) {
     const numSum = answer.reduce((acc, curr) => acc + curr);
     const result = `${numSum}\n${numMin}`;
     return result;
-}
+} 

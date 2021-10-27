@@ -6,6 +6,7 @@ input = Number(input[0]);
 solution(input);
 
 function solution(n) {
+    // 별찍기 문제
     let answer = '';
     for(let i = 0; i < n; i++) {
         for(let j = 0; j < n; j++) {

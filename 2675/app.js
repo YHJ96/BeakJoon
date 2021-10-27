@@ -10,6 +10,7 @@ for(let i = 1; i <= Number(input[0]); i++) {
 solution(inputArray);
 
 function solution(arr) {
+    // 문자열 길이만큼 이어붙히기
     for(let i = 0; i < arr.length; i++) {
         let answer = '';
         for(let j = 0; j < arr[i].s.length; j++) {

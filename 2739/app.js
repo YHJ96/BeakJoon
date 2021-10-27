@@ -6,6 +6,7 @@ input = Number(input[0]);
 solution(input);
 
 function solution(n) {
+    // 구구단
     for(let i = 1; i < 10; i++) {
         console.log(`${n} * ${i} = ${n * i}`);
     }

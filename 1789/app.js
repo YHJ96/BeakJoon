@@ -20,4 +20,4 @@ function solution(n) {
     if(n === 0) return answer[answer.length - 1];
     // n이 음수이면 마지막 인덱스의 앞의 인덱스 출력
     return answer[answer.length - 2];
-}
+} 

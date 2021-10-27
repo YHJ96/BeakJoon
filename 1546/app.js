@@ -6,6 +6,7 @@ input = input[1].split(' ').map((item) => Number(item));
 solution(input);
 
 function solution(n) {
+    // 점쉬의 최대값으로 평균 재지정
     const max = Math.max(...n);
     let sum = 0;
     for(let i = 0; i < n.length; i++) {

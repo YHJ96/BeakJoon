@@ -26,4 +26,4 @@ function solution(arr) {
         answer += x.toString() + '\n';
     }
     return answer;
-}
+} 

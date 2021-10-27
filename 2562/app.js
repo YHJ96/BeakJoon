@@ -21,4 +21,4 @@ function solution(n) {
     }
     console.log(max);
     console.log(index);
-}
+} 

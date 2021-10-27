@@ -18,5 +18,5 @@ function solution(n) {
         if(compare === arr[i].split('').join('')) answer += 'yes' + '\n';
         else answer += 'no' + '\n'; 
     }
-    return answer.trimEnd();
-}
+    return answer.trimEnd(); 
+} 

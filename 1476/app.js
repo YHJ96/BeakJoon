@@ -13,4 +13,4 @@ function solution(arr) {
         if((arr[0] - answer) % 15 === 0 && (arr[1] - answer) % 28 === 0 && (arr[2] - answer) % 19 === 0) return answer;
         answer += 1;
     }
-}
+} 

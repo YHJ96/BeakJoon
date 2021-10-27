@@ -31,4 +31,4 @@ function solution(arr1, arr2) {
         answer += x + '\n';
     }
     return count + '\n' + answer.trimEnd();
-}
+} 

@@ -9,6 +9,7 @@ function solution(n) {
     let times = `${n[0] * n[1] * n[2]}`;
     let answer = Array(10).fill(0);
     times = [...times.toString()];
+    // 1 ~ 9 체크
     for (let i = 0; i < times.length; i++) {
         if (times[i] === '0') {
             answer[0] = answer[0] + 1;

@@ -41,4 +41,4 @@ function solution(n) {
     else mode = compare[0][0];
     const answer = avg + '\n' + mid + '\n' + mode + '\n' + length;
     return answer;
-}
+} 

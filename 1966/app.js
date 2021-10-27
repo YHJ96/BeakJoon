@@ -57,4 +57,4 @@ function solution(numArr, wordArr) {
     return answer.trim();
 }
 
-console.log(solution(num, word));
+console.log(solution(num, word)); 

@@ -19,4 +19,4 @@ function solution(num, n) {
     if(answer.length <= n - 1) return 0;
     // n번째 숫자 출력
     return answer[n - 1];
-}
+} 

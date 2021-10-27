@@ -6,6 +6,7 @@ input = input.map((item) => parseInt(item));
 solution(input[0], input[1]);
 
 function solution(a, b) {
+    // 곱셈 공식 사용
     let newB = `${b}`;
     let answerNum = [];
     newB = [...newB];

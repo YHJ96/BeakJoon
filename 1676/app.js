@@ -13,4 +13,4 @@ function solution(n) {
         answer += Math.floor(n / i);
     }
     return answer;
-}
+} 

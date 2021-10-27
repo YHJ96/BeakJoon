@@ -32,4 +32,4 @@ function solution(num) {
         } else return 'NO';
     }
     return answer.trim();
-};
+}; 

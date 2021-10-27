@@ -30,4 +30,4 @@ function solution(input) {
     return answer.trimEnd();
 }
 
-// 1. 에라토스테네스의 체 사용
+// 1. 에라토스테네스의 체 사용 

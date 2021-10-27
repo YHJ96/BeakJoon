@@ -5,6 +5,7 @@ input = input[0].split('').map((item) => Number(item));
 
 solution(input);
 
+// 내림차순 정렬문제
 function solution(arr) {
     const newArr = arr.sort((a,b) => b - a).map((item) => item.toString());
     let answer = '';
