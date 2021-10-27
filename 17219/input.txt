@@ -18,4 +18,4 @@ mcc.hanyang.ac.kr ADREAMER
 startlink.io
 acmicpc.net
 noj.am
-mcc.hanyang.ac.kr
+mcc.hanyang.ac.kr 

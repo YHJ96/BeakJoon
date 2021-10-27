@@ -12,4 +12,4 @@ empty
 pop
 push 3
 empty
-top
+top 
