@@ -21,4 +21,4 @@ function solution(str) {
     }
     // n이 뒤에 생기므로 문자열로 반환
     return (answer % 1234567891n).toString();
-}
+} 

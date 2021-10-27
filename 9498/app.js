@@ -6,6 +6,7 @@ input = input.map((item) => Number(item));
 solution(input[0]);
 
 function solution(num) {
+    // 점수출력 문제
     if(num <= 100 && num >= 90) console.log('A');
     else if(num <= 89 && num >= 80) console.log('B');
     else if(num <= 79 && num >= 70) console.log('C');

@@ -17,4 +17,4 @@ function solution(arr) {
     console.log(answer);
 }
 
-// 백준 입출력 문제 때문에 node.js 불가능
+// 백준 입출력 문제 때문에 node.js 불가능 

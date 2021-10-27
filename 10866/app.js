@@ -83,4 +83,4 @@ function solution(arr) {
     return answer;
 }
 
-console.log(solution(inputArray));
+console.log(solution(inputArray)); 

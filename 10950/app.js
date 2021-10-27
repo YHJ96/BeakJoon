@@ -10,6 +10,7 @@ for(let i = 1; i <= Number(input[0]); i++) {
 solution(Number(input[0]), inputArray);
 
 function solution(n, numArr) {
+    // 사칙연산 문제
     for(let i = 0; i < n; i++) {
         console.log(numArr[i].A + numArr[i].B);
     }

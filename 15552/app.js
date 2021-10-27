@@ -17,4 +17,4 @@ function solution(n, numArr) {
         else answer += (numArr[i].A + numArr[i].B) + '\n';
     }
     console.log(answer);
-}
+} 

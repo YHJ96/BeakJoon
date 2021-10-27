@@ -20,4 +20,4 @@ function solution(list, compare) {
         if(mySet.has(x)) answer += 1;
     }
     return answer;
-}
+} 

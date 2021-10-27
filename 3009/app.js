@@ -10,6 +10,7 @@ for(let i = 0; i < input.length; i++) {
 solution(inputArray);
 
 function solution(arr) {
+    // 사각형중 3점이 주어질 경우 1점 구하기 
     let x = 0;
     let y = 0;
     if(arr[0].A === arr[1].A) {
@@ -25,4 +26,4 @@ function solution(arr) {
     } else y = arr[0].B;
 
     console.log(x, y);
-}
+} 

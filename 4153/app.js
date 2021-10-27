@@ -11,6 +11,7 @@ inputArray.pop();
 solution(inputArray);
 
 function solution(arr) {
+    // 직각 삼각형 문제
     for(let i = 0; i < arr.length; i++) {
         const max = Math.max(...arr[i]);
         let sum = 0;

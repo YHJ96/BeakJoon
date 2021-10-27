@@ -6,6 +6,7 @@ input = input[0].split(' ');
 solution(input[0], input[1]);
 
 function solution(num1, num2) {
+    // 큰수 더하기 BigInt사용
     const answer = BigInt(num1)+BigInt(num2);
     console.log(answer.toString());
 }

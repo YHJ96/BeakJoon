@@ -22,4 +22,4 @@ function solution(n, r) {
     return answer;
 }
 
-// 1. nCr은 n! / (r! * !(n - r)) 이다.
+// 1. nCr은 n! / (r! * !(n - r)) 이다. 

@@ -7,6 +7,7 @@ input.shift();
 solution(input)
 
 function solution(nArr) {
+    // 오름차순 정렬문제
     nArr.sort((a,b) => a - b);
     for(let i = 0; i < nArr.length; i++) {
         console.log(nArr[i]);

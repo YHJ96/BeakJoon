@@ -39,4 +39,4 @@ function solution(arr) {
     return answer.trim();
 }
 
-// 1. 에라토스테네스의 체 이용
+// 1. 에라토스테네스의 체 이용 

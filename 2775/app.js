@@ -41,4 +41,4 @@ function solution(arr) {
         answer += item + '\n';
     }
     return answer.trim();
-}
+} 

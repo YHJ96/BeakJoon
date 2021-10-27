@@ -6,6 +6,7 @@ input = input.map((item) => Number(item));
 solution(input);
 
 function solution(n) {
+    // 중복체크
     const filterNum = [];
     n.forEach((item) => {
         const num = item % 42;

@@ -15,6 +15,7 @@ function solution(n) {
         const nItem = [...n[i]];
         let result = 0;
         let add = 0;
+        // 인자가 0일 경우 add 더해주기
         for(let j = 0; j < nItem.length; j++) {
             if(nItem[j] === 'O') {
                 add++;

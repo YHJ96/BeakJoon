@@ -11,6 +11,7 @@ for(let x of input) {
 solution(inputArray);
 
 function solution(arr) {
+    // 배수와 약수 문제
     let answer = '';
     for(let x of arr) {
         if(x.B % x.A === 0) {

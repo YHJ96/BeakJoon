@@ -6,6 +6,7 @@ const inputArray = input[1].split(' ').map((item) => Number(item));
 solution(inputArray);
 
 function solution(n) {
+    // 배열의 max값과 min값 구하기
     let min = n[0];
     let max = n[0];
     for(let i = 0; i < n.length; i++) {

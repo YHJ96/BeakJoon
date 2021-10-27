@@ -26,4 +26,4 @@ function solution(arr, choice) {
         answer += x + ' ';
     }
     return answer;
-}
+} 

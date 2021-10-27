@@ -11,6 +11,7 @@ solution(inputArray);
 
 function solution(arr) {
     let answer = '';
+    // 2차원 좌표 정렬 index 0번값 순으로 오름차순 한뒤 index 0의 값이 같으면 index 1번 순으로 출력
     const newArr = arr.sort((a, b) => {
         if(a[1] === b[1]) {
             return a[0] - b[0];

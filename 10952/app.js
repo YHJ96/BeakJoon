@@ -10,6 +10,7 @@ for(let i = 0; i < input.length; i++) {
 solution(inputArray);
 
 function solution(numArr) {
+    // 사칙연산 문제
     let answer = '';
     let i = 0;
     while(i < numArr.length) {

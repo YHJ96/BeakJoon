@@ -16,4 +16,4 @@ function solution(numArr) {
         console.log(numArr[i].A + numArr[i].B);
         i++;
     }
-};
+}; 

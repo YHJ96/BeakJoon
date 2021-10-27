@@ -10,6 +10,7 @@ for(let i = 1; i <= Number(input[0]); i++) {
 solution(Number(input[0]), inputArray);
 
 function solution(n, numArr) {
+    // 문자열에 변수 넣어서 출력하는 문제
     let answer = '';
     for(let i = 0; i < n; i++) {
         if(i === n - 1) answer += `Case #${i + 1}: ${numArr[i].A + numArr[i].B}`

@@ -32,4 +32,4 @@ function solution(length, tree) {
         }
     }
     return answer;
-}
+} 

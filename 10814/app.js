@@ -11,6 +11,7 @@ solution(inputArray);
 
 function solution(arr) {
     let answer = '';
+    // obj A 번째로 오름차순 정렬
     arr.sort((a,b) => a.A - b.A);
     for(let i = 0; i < arr.length; i++) {
         answer += `${arr[i].A} ${arr[i].B}` + '\n';

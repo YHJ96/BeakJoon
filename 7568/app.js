@@ -30,4 +30,4 @@ function solution(arr) {
         answer += x + ' ';
     }
     return answer;
-}
+} 

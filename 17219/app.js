@@ -25,4 +25,4 @@ function solution(file, search) {
         answer += myMap.get(x) + '\n';
     }
     return answer.trim();
-}
+} 

@@ -18,4 +18,4 @@ function solution(n) {
     result.sort((a,b) => a-b);
     // 공백 넣어서 출력
     return result.join(' ');
-}
+} 

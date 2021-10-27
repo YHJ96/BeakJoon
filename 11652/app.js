@@ -22,4 +22,4 @@ function solution(n) {
     answer.sort((a,b) => b[1] - a[1]);
     // BigInt 때문에 toString()으로 명시적 타입변환
     return answer[0][0].toString();
-}
+} 

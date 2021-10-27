@@ -50,4 +50,4 @@ function solution(arr) {
     return answer.trim();
 }
 
-console.log(solution(inputArray));
+console.log(solution(inputArray)); 

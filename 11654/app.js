@@ -5,6 +5,7 @@ let input = fs.readFileSync(filePath).toString().trim().split('\n');
 solution(input[0]);
 
 function solution(code) {
+    // 아스키코드
     const ASCII = code.charCodeAt();
     console.log(ASCII);
 }

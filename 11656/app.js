@@ -21,4 +21,4 @@ function solution(s) {
         answer += x + '\n';
     }
     return answer.trimEnd();
-}
+} 

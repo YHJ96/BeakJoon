@@ -51,4 +51,4 @@ function solution(block, arr) {
 
 console.log(solution(block, inputArray));
 
-// 접근방식을 잘못함 i에서 높이를 빼면 count 구할수 있음
+// 접근방식을 잘못함 i에서 높이를 빼면 count 구할수 있음 

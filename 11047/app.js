@@ -24,4 +24,4 @@ function solution(price, coin) {
         }
     }
     return answer;
-}
+} 

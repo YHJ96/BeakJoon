@@ -14,4 +14,4 @@ function solution(num) {
     else if(descending.join() === num.join()) return 'descending';
     // 2가지 조건말고는 전부 mixed 출력
     else return 'mixed';
-}
+} 

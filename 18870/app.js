@@ -28,4 +28,4 @@ function solution(num) {
         answer += x + ' ';
     }
     return answer;
-}
+} 

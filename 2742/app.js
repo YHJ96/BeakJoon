@@ -6,6 +6,7 @@ input = Number(input[0]);
 solution(input);
 
 function solution(n) {
+    // n부터 n - 1해서 출력하기
     let newNum = [];
     let answer = '';
     for(let i = 1; i <= n; i++) {

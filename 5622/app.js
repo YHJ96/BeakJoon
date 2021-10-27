@@ -6,6 +6,7 @@ input = input[0];
 solution(input);
 
 function solution(s) {
+    // 다이얼 돌리기
     let answer = 0;
     const dial = [[1],
     ['A','B','C'],

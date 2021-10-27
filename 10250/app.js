@@ -32,4 +32,4 @@ function solution(arr) {
         answer += x + '\n';
     }
     return answer.trim();
-}
+} 

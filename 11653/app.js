@@ -19,4 +19,4 @@ function solution(n) {
         } else count++;
     }
     return answer;
-}
+} 

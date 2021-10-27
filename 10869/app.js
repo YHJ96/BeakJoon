@@ -8,6 +8,7 @@ input = input.map((item) => Number(item));
 solution(input[0], input[1]);
 
 function solution(a, b) {
+    // 사칙연산과 나머지 출력문제
     const add = a + b;
     const minus = a - b;
     const times = a * b;

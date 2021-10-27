@@ -10,6 +10,7 @@ for(let i = 1; i <= Number(input[0]); i++) {
 solution(inputArray);
 
 function solution(arr) {
+    // 2차원 좌표 정렬 index 0번값 순으로 오름차순 한뒤 index 0의 값이 같으면 index 1번 순으로 출력
     let answer = '';
     const newArr = arr.sort((a, b) => {
         if(a[0] === b[0]) {

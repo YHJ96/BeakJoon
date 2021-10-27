@@ -11,4 +11,4 @@ function solution(n) {
     let taxi = n ** 2 * 2;
     let answer = pi + '\n' + taxi;
     return answer;
-}
+} 

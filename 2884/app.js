@@ -8,6 +8,7 @@ input = input.map((item) => Number(item));
 solution(input[0], input[1]);
 
 function solution(hours, minutes) {
+    // 시간에 +45 한뒤 예외처리
     minutes = minutes - 45;
     if(minutes < 0) {
         minutes = minutes + 60;

@@ -6,6 +6,7 @@ input = input.map((item) => Number(item));
 solution(input[0]);
 
 function solution(n) {
+    // 1 ~ n 까지의 합 구하기
     let answer = 0;
     const numArr = [];
     for(let i = 1; i <= n; i++) {
