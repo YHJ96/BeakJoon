@@ -7,7 +7,7 @@ for(let i = 1; i < input.length; i++) {
 }
 const n = +input[0].split(' ')[1]
 
-// 해결실패 입출력 에러
+// 해결실패 입출력 에러 
 function solution(k, lines) {
     const sum = lines.reduce((a, b) => a + b, 0);
     let answer = 0
