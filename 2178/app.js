@@ -41,15 +41,20 @@ function solution(board) {
     let answer;
     const n = board.length;
     const m = board[0].length;
+    // 4방 탐색
     const dy = [1, 0, -1, 0];
     const dx = [0, 1, 0, -1];
+    // BFS를 위한 첫 인자 넣어주기
     const queue = [[0,0,0]];
+    // Queue에 인자가 없으면 종료
     while(queue.length) {
         const [y, x, path] = queue.shift();
         for(let i = 0; i < 4; i++) {
             const ny = y + dy[i];
             const nx = x + dx[i];
+            // 범위설정
             if(ny >= 0 && nx >= 0 && ny < n && nx < m && board[ny][nx] === 1) {
+                // 0,0 도 포함하여야함
                 board[ny][nx] = path + 2;
                 queue.push([ny, nx, path + 1]);
             }
