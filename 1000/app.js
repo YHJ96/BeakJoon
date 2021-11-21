@@ -6,7 +6,6 @@ input = input.split(' ');
 input = input.map((item) => Number(item));
 
 function solution(a, b) {
-    // 백업테스트
     // 사칙연산
     const answer = a + b;
     return answer;
