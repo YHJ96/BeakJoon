@@ -1,27 +1,27 @@
 const fs = require('fs');
 const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-let input = fs.readFileSync(filePath).toString().trim().split('\n').map((item) => +item);
+let input = fs.readFileSync(filePath).toString().trim().split('\n')[0].split(' ').map((item) => +item);
+const [count, n] = input;
 
-function solution(arr) {
-    let sum = 0;
-    const findIndex = new Map();
-    const index = [];
-    // Map함수에 각자의 자리 인덱스를 저장
-    arr.forEach((item, index) => {
-        findIndex.set(item, index + 1);
-    });
-    // 내림차순 정렬
-    arr.sort((a,b) => b-a);
-    // 점수의 상위 5개의 더하고 인덱스를 기록
-    for(let i = 0; i < 5; i++) {
-        sum += arr[i];
-        index.push(findIndex.get(arr[i]));
+function solution(count, n) {
+    const answer = [];
+    const people = [];
+    // 사람의 숫자 만큼 people배열에 요소 추가
+    for(let i = 1; i <= count; i++) {
+        people.push(i);
     }
-    // 인덱스를 오름차순 정렬
-    index.sort((a,b) => a-b);
+    // people의 배열에 인자가 없을 때 까지 반복
+    while(people.length !== 0) {
+        // n 번째 전까지 people의 맨 뒤로 보내기
+        for(let i = 1; i < n; i++) {
+            const item = people.shift();
+            people.push(item);
+        }
+        // n 번째 사람을 추출한뒤 answer배열에 요소 추가
+        answer.push(people.shift());
+    }
     // 정답 정제
-    const answer = sum + '\n' + index.join(' ');
-    return answer;
+    return `<${answer.join(', ')}>`;
 }
 
-console.log(solution(input));
+console.log(solution(count, n));
