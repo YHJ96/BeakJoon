@@ -1,46 +1,34 @@
 const fs = require('fs');
 const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-let input = fs.readFileSync(filePath).toString().trim().split('\n');
-const inputArray = [];
-for (let i = 1; i < input.length; i++) {
-    inputArray.push(input[i].trim());
-}
-
-function searchNum(s) {
-    let answer = '';
-    // length를 끝까지 가기 위해 추출
-    s += ' ';
-    // 문자열에서 숫자형태 추출
-    const check = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    for (let i = 0; i < s.length; i++) {
-        if (check.includes(s[i])) {
-            answer += s[i];
-            if (!check.includes(s[i + 1])) answer += ' ';
-        }
-    }
-    // 100자리까지 들어올 수 있으므로 Bigint
-    return answer.trim().split(' ').map((item) => BigInt(item));
-}
+let input = fs.readFileSync(filePath).toString().split('\n')[1];
+input = input.split(' ').map((item) => +item);
 
 function solution(arr) {
-    let answer = '';
-    let result = [];
-    // item을 전부 reslut에 추가
-    for (let x of arr) {
-        const item = searchNum(x);
-        result.push(...item);
+    const result = [];
+    // 2중 반복문을 돌면서 숫자와 전체 배열의 숫자의 차의 절대값을 구하고 result에 넣기.
+    for(let i = 0; i < arr.length; i++) {
+        let sum = 0;
+        for(let j = 0; j < arr.length; j++) {
+            // 절대값을 구함
+            const abs = Math.abs(arr[i] - arr[j]);
+            sum += abs;
+        }
+        result.push(sum);
     }
-    // sort 정렬 올림차순
-    result.sort((a,b) => {
-        if(a - b > 0n) return 1;
-        if(a - b === 0n) return 0;
-        if(a - b < 0n) return -1;
+    // 차가 제일 작은수를 검색
+    const min = Math.min(...result);
+    const idx = [];
+    // arr에서 제일 작은수의 인덱스만 추출
+    result.forEach((item, index) => {
+        if(item === min) idx.push(index);
     });
-    // 정답 정제
-    for(let x of result) {
-        answer += x + '\n';
+    // 정답 초기화
+    let answer = arr[idx[0]];
+    // 반복문을 돌면서 제일 작은숫자 추출
+    for(let x of idx) {
+        answer = Math.min(arr[x], answer);
     }
-    return answer.trim();
+    return answer;
 }
 
-console.log(solution(inputArray));
+console.log(solution(input));
