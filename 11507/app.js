@@ -5,6 +5,7 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+
 rl.on('line', function (input) {
     const inputArray = [];
     let item = [];
@@ -48,6 +49,7 @@ rl.on('line', function (input) {
     }
 
     console.log(solution(inputArray));
+    
     rl.close();
 }).on("close", function () {
     process.exit();
