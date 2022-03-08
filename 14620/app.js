@@ -62,4 +62,4 @@ function solution(n, arr) {
     }
 }
 
-console.log(solution(n, inputArray));
+console.log(solution(n, inputArray)); 
