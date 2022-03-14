@@ -45,4 +45,4 @@ function solution(arr) {
     return answer.join("\n");
 }
 
-console.log(solution(input));
+console.log(solution(input)); 
