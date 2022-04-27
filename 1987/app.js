@@ -9,6 +9,7 @@ for(let i = 0; i < input.length; i++) {
 
 /*
 dy = [1, 0, -1 ,0] dx = [0, 1, 0, -1]로 실행하면 시간초과 배열의 자료구조 때문에 좌우탐색 보다 상하탐색이 더욱더 시간이 빠름
+자료구조 공부하기
 */
 
 function solution(arr) {
