@@ -2,11 +2,13 @@ const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 let input = +fs.readFileSync(filePath).toString().trim();
 
+// 재귀함수
 function fibo1(n) {
     if(n === 1 || n === 2) return 1;
     else return fibo1(n-1) + fibo1(n-2);
 }
 
+// DP
 function fibo2(n) {
     let count = 1;
     const arr = Array.from({ length: n }, () => 0);
@@ -21,6 +23,7 @@ function fibo2(n) {
 
 function solution(n) {
     let answer = [fibo1(n), fibo2(n)];
+    // 정답 정제
     return answer.join(' ');
 }
 
