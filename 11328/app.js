@@ -1,24 +1,39 @@
-const fs = require('fs');
-const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-let input =fs.readFileSync(filePath).toString().trim().split('\n').map((item) => item.trim());
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : './input.txt';
+let input = fs.readFileSync(filePath).toString().trim().split('\n');
+input.shift();
 
-function solution(input) {
-    const [s1, s2] = input;
-    let answer = 0;
-    // 문자열 2개를 각각 알파벳으로 나누기위해서 2차원 배열 초기화
-    const compare = Array.from({length : 2}, () => Array.from({length : 26}, () => 0));
-    // 2개의 문자열을 돌면서 알파벳 순서대로 있으면 +1씩 증가
-    for(let i = 0; i < s1.length; i++) {
-        const idx = s1.codePointAt(i) - 97;
-        compare[0][idx]++;
+// 단어를 비교하는 함수 생성
+function compareWord(str) {
+    let flag = true;
+    // 구조 분해 할당으로 변수 초기화
+    const [str1, str2] = str.split(' ');
+    const strHash1 = new Map();
+    const strHash2 = new Map();
+    // Map에 요소만큼 순회하면서 등록
+    for (let i = 0; i < str1.length; i++) {
+        if (strHash1.has(str1[i])) strHash1.set(str1[i], strHash1.get(str1[i]) + 1);
+        else strHash1.set(str1[i], 1);
+        if (strHash2.has(str2[i])) strHash2.set(str2[i], strHash2.get(str2[i]) + 1);
+        else strHash2.set(str2[i], 1);
     }
-    for(let i = 0; i < s2.length; i++) {
-        const idx = s2.codePointAt(i) - 97;
-        compare[1][idx]++;
-    }
-    // 단어의 절대값의 차를 구하기
-    for(let i = 0; i < 26; i++) answer += Math.abs(compare[0][i] - compare[1][i]);
-    return answer;
-} 
+    // 요소와 요소끼리 다른 값이 있으면 false
+    strHash1.forEach((item, index) => {
+        const compore = strHash2.get(index);
+        if (compore !== item) return flag = false;
+    });
+    return flag;
+}
 
-console.log(solution(input));
+function solution(arr) {
+    const answer = [];
+    // arr 요소만큼 순회시작
+    for (let str of arr) {
+        if (compareWord(str)) answer.push("Possible");
+        else answer.push("Impossible");
+    }
+    // 정답 정제
+    return answer.join('\n');
+}
+
+console.log(solution(input))
