@@ -1,2 +1,5 @@
-aabbcc
-xxyybb
+4
+a a
+ab ba
+ring gnir
+newt twan
