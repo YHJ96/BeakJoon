@@ -13,10 +13,11 @@ function solution(arr) {
         // 아닐경우 출발시간으로 오름차순 정렬
         return a[0] - b[0];
     });
+    console.log(cows);
     cows.forEach((item) => {
         const [arrive, time] = item;
         // answer이 작을 경우 arrive + time 대입
-        if (answer <= arrive + time) answer = arrive + time;
+        if (answer <= arrive) answer = arrive + time;
         // 아닌경우 + 시간
         else answer += time;
     });
